@@ -3,13 +3,15 @@ package entity;
 import java.util.ArrayList;
 
 public class MobilePhone extends Product {
-    private static  ArrayList<MobilePhone> mobilePhones = new ArrayList<>();
     private int storage;
     private double screenSize;
     private int batteryPower;
     private int memory;
     private String color;
 
+    public MobilePhone (){
+        super();
+    }
     public MobilePhone( double unitPrice, double discountRate, int stockAmount, String name, Brand brand) {
         super(unitPrice, discountRate, stockAmount, name, brand);
     }
@@ -22,62 +24,12 @@ public class MobilePhone extends Product {
         this.color = color;
     }
 
-    @Override
-    public void menu() {
-
-    }
-
-    @Override
-    public void add() {
-
-        System.out.print("Ürünün fiyatı : ");
-        double price= input.nextDouble();
-        System.out.print("Ürünün adı : ");
-        input.nextLine();
-        String name=input.nextLine();
-        System.out.print("Ürünün indirim oranı : ");
-        int discountRate= input.nextInt();
-        System.out.print("Ürünün stoğu : ");
-        int amount= input.nextInt();
-        System.out.print("Ürünün rami : ");
-        int memory= input.nextInt();
-        System.out.print("Ürünün ekranı : ");
-        double screenSize= input.nextDouble();
-        System.out.print("Ürünün hafızası :");
-        int storage= input.nextInt();
-        System.out.print("Ürünün pili : ");
-        int battery= input.nextInt();
-        input.nextLine();
-        System.out.print("Ürünün rengi : ");
-        String color= input.nextLine();
-
-
-
-
-    }
-
-    @Override
-    public void delete() {
-        getProducts();
-    }
-
-    @Override
-    public void update() {
-
-    }
-
-    @Override
-    public void getProducts() {
-
-    }
-
-
     public int getStorage() {
         return storage;
     }
 
     public void setStorage(int storage) {
-        this.storage = storage;
+            this.storage = storage;
     }
 
     public double getScreenSize() {

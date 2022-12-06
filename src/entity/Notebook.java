@@ -5,6 +5,9 @@ public class Notebook extends Product{
     private int storage;
     private double screenSize;
 
+    public Notebook(){
+        super();
+    }
     public Notebook( double unitPrice, double discountRate, int stockAmount, String name, Brand brand) {
         super( unitPrice, discountRate, stockAmount, name, brand);
     }
@@ -14,50 +17,6 @@ public class Notebook extends Product{
         this.storage = storage;
         this.screenSize = screenSize;
     }
-
-    @Override
-    public void menu() {
-
-    }
-
-    @Override
-    public void add() {
-        System.out.print("Ürünün fiyatı : ");
-        double price= input.nextDouble();
-        System.out.print("Ürünün adı : ");
-        input.nextLine();
-        String name=input.nextLine();
-        System.out.print("Ürünün indirim oranı : ");
-        int discountRate= input.nextInt();
-        System.out.print("Ürünün stoğu : ");
-        int amount= input.nextInt();
-        System.out.print("Ürünün rami : ");
-        int ram= input.nextInt();
-        System.out.print("Ürünün ekranı : ");
-        double screenSize= input.nextDouble();
-        System.out.print("Ürünün hafızası :");
-        int memory= input.nextInt();
-
-
-
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
-    public void update() {
-
-    }
-
-    @Override
-    public void getProducts() {
-
-    }
-
 
     public int getMemory() {
         return memory;
